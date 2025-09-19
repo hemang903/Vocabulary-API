@@ -11,7 +11,7 @@ const AddVocab = () => {
         e.preventDefault(); // stop page reload
 
         try {
-        const res = await fetch("http://localhost:3000/vocab/add", {
+        const res = await fetch("https://vocabulary-practice.onrender.com/vocab/add", {
             method: "POST",
             headers: {
             "Content-Type": "application/json", // important!

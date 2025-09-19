@@ -28,7 +28,8 @@ const Home = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setLoading(true)
-        fetch(`http://localhost:3000/vocab/random?count=${count}`)
+        fetch(`https://vocabulary-practice.onrender.com/vocab/random?count=${count}`)
+        
         .then((res) => res.json())
         .then((data) => {
             setVocab(data);

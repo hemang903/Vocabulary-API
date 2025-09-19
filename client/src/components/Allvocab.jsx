@@ -4,7 +4,7 @@ function Allvocab() {
   const [vocab, setVocab] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/vocab/all")
+    fetch("https://vocabulary-practice.onrender.com/vocab/all")
       .then((res) => res.json())
       .then((data) => setVocab(data))
       .catch((err) => console.error("Error:", err));
