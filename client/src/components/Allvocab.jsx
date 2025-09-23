@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Allvocab() {
   const [vocab, setVocab] = useState([]);
@@ -11,16 +12,16 @@ function Allvocab() {
   }, []);
 
   return (
-    <div className="p-2 w-[60%] ">
+    <div className=" text-white ">
       <h2 className="text-xl mb-4">📘 All Vocabulary</h2>
       <ul>
         {vocab.map((item, i) => (
-          <li key={i} className="border-dashed border-sky-200 border m-2 p-2">
-            <div className="flex gap-7">
+          <li key={i} className="border-dashed border-sky-200 border p-2">
+            <div className="flex gap-2">
 
-            <strong className='capitalize'>{item.word}</strong> 
-            <span>→</span> 
-            <p>{item.meaning}</p>
+              <strong className='capitalize'>{item.word}</strong> 
+              <span>→</span> 
+              <p>{item.meaning}</p>
             </div>
           </li>
         ))}

@@ -42,16 +42,16 @@ const Home = () => {
 
     };
 
-    if (loading) return <h2>Loading...</h2>;
+    if (loading) return <h2 className='text-white'>Loading...</h2>;
 
     return (
-        <div className='p-2 font-arial w-[60%] flex justify-cneter flex-col  '> 
+        <div className=' font-arial w-[100%] flex justify-cneter flex-col text-white '> 
             <div>
 
                 <h1 className='text-xl'>📘 Random Vocabulary</h1>
             </div>
 
-            <form onSubmit={handleSubmit} className='py-3 px-1 my-4 flex gap-6'>
+            <form onSubmit={handleSubmit} className='py-3 px-1 my-4 flex gap-2'>
                 <input type="number"
                     name="count" 
                     value={count}
@@ -68,7 +68,7 @@ const Home = () => {
             
             <ul>
                 {vocab.map((item, index) => (
-                <li key={index} className='flex gap-4 border-dashed border m-1 p-2 text-lg items-center rounded'>
+                <li key={index} className='flex border-dashed border m-1 p-2 text-lg items-center rounded'>
             
                     <FontAwesomeIcon icon={faEye} 
                         className="text-blue-500 cursor-pointer hover:text-sky-900" 
@@ -76,7 +76,7 @@ const Home = () => {
                             setShowMeaning(showMeaning === index ? null : index)
                         }
                     />
-                    <div className='flex gap-10'>
+                    <div className='flex gap-2 pl-2'>
 
                         <strong className='capitalize'>{item.word}</strong> 
                         <span>→</span>

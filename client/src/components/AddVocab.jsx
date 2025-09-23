@@ -35,7 +35,7 @@ const AddVocab = () => {
     };
 
     return (
-        <div className='w-[60%]  '>
+        <div className='text-white  '>
             <div className='p-2  '>
                 <h2 className='text-2xl'>➕ Add New Vocabulary</h2>
 
