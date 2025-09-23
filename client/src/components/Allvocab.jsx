@@ -13,7 +13,7 @@ function Allvocab() {
 
   return (
     <div className=" text-white ">
-      <h2 className="text-xl mb-4">📘 All Vocabulary</h2>
+      <h2 className="text-xl mb-4"><i class="fa-solid fa-book text-pink-300"></i> All Vocabulary</h2>
       <ul>
         {vocab.map((item, i) => (
           <li key={i} className="border-dashed border-sky-200 border p-2">

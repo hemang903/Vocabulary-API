@@ -48,7 +48,7 @@ const Home = () => {
         <div className=' font-arial w-[100%] flex justify-cneter flex-col text-white '> 
             <div>
 
-                <h1 className='text-xl'>📘 Random Vocabulary</h1>
+                <h1 className='text-xl'><i class="fa-duotone fa-solid fa-shuffle text-yellow-300"></i> Random Vocabulary</h1>
             </div>
 
             <form onSubmit={handleSubmit} className='py-3 px-1 my-4 flex gap-2'>
