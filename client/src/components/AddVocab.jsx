@@ -1,4 +1,5 @@
 import React from 'react'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from 'react';
 
 const AddVocab = () => {
@@ -37,7 +38,7 @@ const AddVocab = () => {
     return (
         <div className='text-white  '>
             <div className='p-2  '>
-                <h2 className='text-2xl'>➕ Add New Vocabulary</h2>
+                <h2 className='text-2xl'><i className="fa-solid fa-plus text-green-500"></i> Add New Vocabulary</h2>
 
                 <form onSubmit={handleSubmit} className='p-4  '>
                     <input
