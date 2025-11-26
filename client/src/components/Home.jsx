@@ -10,25 +10,11 @@ const Home = () => {
     const [count, setCount] = useState("5");
     const [row, setRow] = useState(0)
 
-
-    // Fetch vocab from API
-    // useEffect(() => {
-    //     fetch("http://localhost:3000/vocab/random?count=5") // you can change count
-    //     .then((res) => res.json())
-    //     .then((data) => {
-    //         setVocab(data);
-    //         setLoading(false);
-    //     })
-    //     .catch((err) => {
-    //         console.error("Error fetching vocab:", err);
-    //         setLoading(false);
-    //     });
-    // }, []);
-
     const handleSubmit = (e) => {
         e.preventDefault();
         setLoading(true)
-        fetch(`https://vocabulary-practice.onrender.com/vocab/random?count=${count}`)
+        // fetch(`https://vocabulary-practice.onrender.com/vocab/random?count=${count}`)
+        fetch(`http://localhost:3000/vocab/random?count=${count}`)
         
         .then((res) => res.json())
         .then((data) => {
@@ -48,7 +34,7 @@ const Home = () => {
         <div className=' font-arial w-[100%] flex justify-cneter flex-col text-white '> 
             <div>
 
-                <h1 className='text-xl'><i class="fa-duotone fa-solid fa-shuffle text-yellow-300"></i> Random Vocabulary</h1>
+                <h1 className='text-xl'><i className="fa-duotone fa-solid fa-shuffle text-yellow-300"></i> Random Vocabulary</h1>
             </div>
 
             <form onSubmit={handleSubmit} className='py-3 px-1 my-4 flex gap-2'>

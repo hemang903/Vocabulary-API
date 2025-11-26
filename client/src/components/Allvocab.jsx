@@ -5,7 +5,8 @@ function Allvocab() {
   const [vocab, setVocab] = useState([]);
 
   useEffect(() => {
-    fetch("https://vocabulary-practice.onrender.com/vocab/all")
+    // fetch("https://vocabulary-practice.onrender.com/vocab/all")
+    fetch(`http://localhost:3000/vocab/all`)
       .then((res) => res.json())
       .then((data) => setVocab(data))
       .catch((err) => console.error("Error:", err));
@@ -13,7 +14,7 @@ function Allvocab() {
 
   return (
     <div className=" text-white ">
-      <h2 className="text-xl mb-4"><i class="fa-solid fa-book text-pink-300"></i> All Vocabulary</h2>
+      <h2 className="text-xl mb-4"><i className="fa-solid fa-book text-pink-300"></i> All Vocabulary</h2>
       <ul>
         {vocab.map((item, i) => (
           <li key={i} className="border-dashed border-sky-200 border p-2">
